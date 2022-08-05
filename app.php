@@ -1,6 +1,6 @@
 <?php
 /**
- * @link          https://github.com/mikkelson/clubhouse-csv-import
+ * @link          https://github.com/marnionrails/shortcut-csv-import
  * @author        James Mikkelson
  */
 ini_set('error_reporting', 0);
@@ -51,7 +51,6 @@ if (!empty($_FILES['csv']['name']) && substr($_FILES['csv']['name'], -4) == '.cs
             addIfNotEmptyAsHash('labels', $line, ',', 'name', $payload);
             addIfNotEmptyAsArray('external_links', $line, ' ', $payload);
             addIfNotEmpty('external_id', $line, $payload);
-            addIfNotEmpty('workflow_state_id', $line, $payload);
 
             $data = json_encode($payload);
 

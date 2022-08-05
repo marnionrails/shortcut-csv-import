@@ -6,9 +6,9 @@ There is no framework or package manager, just a few lines of PHP and a pleasant
 
 # Preview
 
-![Shortcut CSV Import Tool](https://raw.githubusercontent.com/mikkelson/clubhouse-csv-import/master/images/preview.PNG)
+![Shortcut CSV Import Tool](https://raw.githubusercontent.com/marnionrails/shortcut-csv-import/main/images/preview.PNG)
 
-If you do not want to install the app, a hosted version is available: [Shortcut CSV Importer](http://jamesmikkelson.com/clubhouse)
+If you do not want to install the app, a hosted version is available: [Shortcut CSV Importer](http://marnionrails.com/shortcut)
 
 ## Supported Fields
 
