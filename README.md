@@ -23,7 +23,6 @@ If you do not want to install the app, a hosted version is available: [Shortcut 
 * external_id
 * labels (comma-separated list of the labels to attach)
 * external_links
-* workflow_state _id
 * milestone_id
 * description
 * estimate
@@ -37,18 +36,19 @@ Clone this repository to a location available by your webserver and load index.p
 
 # Installation via Docker
 1. Install Docker on your machine
-1. Clone this repository to any location on your system
-2. run `docker-compose up -d` in the repository folder
-3. Visit `localhost:8080`, the importer is available there
+2. Clone this repository to any location on your system
+3. Navigate to the shortcut-csv-import repository
+3. To start up your Docker container, run `docker-compose up -d` 
+3. Visit `localhost:8080`, the importer is now available there
 
 # Usage for Migrating Stories between Shortcut Workspaces
 1. Download the epic as a csv file
 2. Create an API Token in the target workspace and save it somewhere safe
 3. Create an epic in the target workspace and remember the id
-4. Create Projects (if not existant) in the target workspace and remember the ids
+4. Retrieve the workflow_state_id and copy/paste it immediately
 5. Open the CSV file in a spreadsheet tool (e.g. Google Sheets)
 6. Change the column title `type` to `story_type`
 7. Replace the epic ids from the origin workspace with the epic id from the target workspace
-8. Do the same for project ids
+8. Do the same for workflow_state_ids
 9. Paste the API token in the token field in the importer
 10. Upload the file and hit import
