@@ -71,13 +71,13 @@
                 Required Fields
                 <ul>
                   <li>workflow_state_id</li>
-                  <li>name <em>(The title of this story)</em></li>
-                  <li>story_type <em>(options: feature, chore, bug)</em></li>
+                  <li>name <em>(The title of this story)</em></li>   
                 </ul>
               </li>
               <li>
                 Optional Fields
                 <ul>
+                  <li>story_type(options: feature, chore, bug)</li>
                 	<li>epic_id</li>
                 	<li>external_id</li>
                 	<li>labels</li>
