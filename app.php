@@ -27,8 +27,8 @@ if (!empty($_FILES['csv']['name']) && substr($_FILES['csv']['name'], -4) == '.cs
                 $apiCount = 0;
             }
 
-            //workflow_state_id, name and story_type are required by the Shortcut API
-            if (empty($line['workflow_state_id']) || empty($line['name']) || empty($line['story_type'])) {
+            //workflow_state_id and name are required by the Shortcut API
+            if (empty($line['workflow_state_id']) || empty($line['name'])) {
                 $error_lines[] = "Line " . $count . " is missing required field <i>workflow_state_id</i>, <i>name</i> or <i>story_type</i>";
                 $skipped++;
                 $failed++;
@@ -37,8 +37,7 @@ if (!empty($_FILES['csv']['name']) && substr($_FILES['csv']['name'], -4) == '.cs
 
 	        // Required columns
             $payload = array("workflow_state_id" => $line['workflow_state_id'],
-                              "name" => $line['name'],
-                              "story_type" => $line['story_type']
+                              "name" => $line['name']
             );
             
             // Optional columns
@@ -50,7 +49,7 @@ if (!empty($_FILES['csv']['name']) && substr($_FILES['csv']['name'], -4) == '.cs
             addIfNotEmptyAsArray('owner_ids', $line, ' ', $payload);
             addIfNotEmptyAsHash('labels', $line, ',', 'name', $payload);
             addIfNotEmptyAsArray('external_links', $line, ' ', $payload);
-            addIfNotEmpty('external_id', $line, $payload);
+            addIfNotEmpty('story_type', $line, $payload);
 
             $data = json_encode($payload);
 
