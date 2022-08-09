@@ -77,7 +77,7 @@
               <li>
                 Optional Fields
                 <ul>
-                  <li>story_type(options: feature, chore, bug)</li>
+                  <li>story_type <em>(options: feature, chore, bug)</em></li>
                 	<li>epic_id</li>
                 	<li>external_id</li>
                 	<li>labels</li>
